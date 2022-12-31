@@ -16,11 +16,11 @@ PHP7初級試験の実習環境です。
 
 ### Docker
 
-Docker コンテナを利用して構築する方法です。
-複数コンテナを使用するため、Docker Compose も利用します。
+Docker コンテナを利用して構築する方法です。  
+複数コンテナを使用するため、Docker Compose も利用します。  
 Windows / Mac とも Docker Desktop が必要です。
 
 ## 試験情報
 
-PHP7技術者認定初級試験
+PHP7技術者認定初級試験  
 https://www.phpexam.jp/summary/novice7

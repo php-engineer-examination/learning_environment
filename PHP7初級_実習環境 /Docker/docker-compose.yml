@@ -2,7 +2,7 @@ version: '3'
 
 services:
   web:
-    container_name: php7elexam-php-apache
+    container_name: php7nlexam-php-apache
     build: ./web
     ports:
       - '${FORWARD_HTTP_PORT}:80'
@@ -12,7 +12,7 @@ services:
     networks:
       - br0
   mariadb:
-    container_name: php7elexam-mariadb
+    container_name: php7nlexam-mariadb
     build: ./db
     volumes:
       - ./db/database:/var/lib/mysql
@@ -31,7 +31,7 @@ services:
     networks:
       - br0
   phpmyadmin:
-    container_name: php7elexam-phpmyadmin
+    container_name: php7nlexam-phpmyadmin
     image: phpmyadmin/phpmyadmin
     restart: on-failure
     depends_on:
