@@ -1,6 +1,7 @@
 # PHP8技術者認定初級試験 実習環境
 
-PHP8初級試験の実習環境です。
+PHP8初級試験の実習環境です。  
+※PHP8初級試験はまだ開始されていません。
 
 ## 環境
 
@@ -18,6 +19,11 @@ PHP8初級試験の実習環境です。
 
 ### Docker
 
-Docker コンテナを利用して構築する方法です。
-複数コンテナを使用するため、Docker Compose も利用します。
+Docker コンテナを利用して構築する方法です。  
+複数コンテナを使用するため、Docker Compose も利用します。  
 Windows / Mac とも Docker Desktop が必要です。
+
+## 試験情報
+
+PHP8技術者認定初級試験 (ベータ試験の情報)  
+https://www.phpexam.jp/archives/2920

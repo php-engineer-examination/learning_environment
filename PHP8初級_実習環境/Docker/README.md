@@ -41,7 +41,7 @@ Docker Desktop を起動しておいてください。
 初期値は下記のとおりです。
 
 ```.env
-COMPOSE_PROJECT_NAME=php8elexam
+COMPOSE_PROJECT_NAME=php8nlexam
 DB_HOST=mariadb
 DB_DATABASE=sample
 DB_USER=docker
@@ -54,7 +54,7 @@ FORWARD_PMA_PORT=8080
 
 ## 実習環境の実行
 
-## Docker Compose から起動
+### Docker Compose から起動
 
 Docker Compose でコンテナを一式起動します。
 
