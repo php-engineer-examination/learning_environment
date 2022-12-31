@@ -4,7 +4,7 @@ PHP8上級試験の Docker 実習環境です。
 
 ## 環境
 
-PHP8上級試験は PHP 8.0.0 で動作確認しております。
+PHP8上級試験は PHP 8.0.0 で動作確認しております。  
 また、その他は「独習PHP 第4版」より動作確認環境を参考に選出しました。
 
 * PHP 8.0.0
@@ -35,14 +35,14 @@ Docker Desktop を起動しておいてください。
 
 ### 環境変数を設定
 
-こちらは通常は必要のない作業です。
+こちらは通常は必要のない作業です。  
 必要に応じて書き換えてください。
 
-環境変数は `.env` ファイルに書かれています。
+環境変数は `.env` ファイルに書かれています。  
 初期値は下記のとおりです。
 
 ```.env
-COMPOSE_PROJECT_NAME=php8alexam
+COMPOSE_PROJECT_NAME=php8elexam
 DB_HOST=mariadb
 DB_DATABASE=sample
 DB_USER=docker
@@ -55,7 +55,7 @@ FORWARD_PMA_PORT=8080
 
 ## 実習環境の実行
 
-## Docker Compose から起動
+### Docker Compose から起動
 
 Docker Compose でコンテナを一式起動します。
 
