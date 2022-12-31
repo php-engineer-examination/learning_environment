@@ -1,0 +1,53 @@
+version: '3'
+
+services:
+  web:
+    container_name: php7elexam-php-apache
+    build: ./web
+    ports:
+      - '${FORWARD_HTTP_PORT}:80'
+    volumes:
+      - ./html:/var/www/html
+    hostname: localhost
+    networks:
+      - br0
+  mariadb:
+    container_name: php7elexam-mariadb
+    build: ./db
+    volumes:
+      - ./db/database:/var/lib/mysql
+    ports:
+      - '${FORWARD_DB_PORT}:3306'
+    hostname: localhost
+    restart: always
+    environment:
+      MYSQL_DATABASE: '${DB_DATABASE}'
+      MYSQL_USER: '${DB_USER}'
+      MYSQL_PASSWORD: '${DB_PASSWORD}'
+      MYSQL_HOST: '${DB_HOST}'
+      MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
+      MYSQL_ROOT_HOST: '%'
+      TZ: '${TZ}'
+    networks:
+      - br0
+  phpmyadmin:
+    container_name: php7elexam-phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    restart: on-failure
+    depends_on:
+      - mariadb
+    links:
+      - mariadb
+    environment:
+      PMA_ARBITRARY: 1
+      PMA_HOST: '${DB_HOST}'
+      PMA_USER: '${DB_USER}'
+      PMA_PASSWORD: '${DB_PASSWORD}'
+    ports:
+      - '${FORWARD_PMA_PORT}:80'
+    networks:
+      - br0
+
+networks:
+  br0:
+    driver: bridge
