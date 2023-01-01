@@ -21,17 +21,11 @@ PHP8上級試験は PHP 8.0.0 で動作確認しております。
 ## 実習環境の準備
 
 1. Docker Desktop のインストール
-2. Docker Desktop の起動
-3. 環境変数の設定
+2. 環境変数の設定
 
 ### Docker Desktop のインストール
 
 [Docker Desktop](https://www.docker.com/products/docker-desktop/) をダウンロードしてインストールしてください。
-
-
-### Docker Desktop の起動
-
-Docker Desktop を起動しておいてください。
 
 ### 環境変数を設定
 
@@ -54,6 +48,10 @@ FORWARD_PMA_PORT=8080
 ```
 
 ## 実習環境の実行
+
+### Docker Desktop の起動
+
+Docker Desktop を起動しておいてください。
 
 ### Docker Compose から起動
 
